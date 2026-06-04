@@ -14,17 +14,17 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
 
-    private val button: Button by lazy { findViewById(id = R.id.button) }
+    private val button: Button by lazy { findViewById(R.id.button) }
 
-    private val input: EditText by lazy { findViewById(id = R.id.input) }
+    private val input: EditText by lazy { findViewById(R.id.input) }
 
     private val viewModel: CryptoExchangeViewModel by viewModels { CryptoExchangeViewModel.ViewModelFactory }
 
-    private val errorBottomSheet by lazy { BottomSheetDialog(context = this) }
+    private val errorBottomSheet by lazy { BottomSheetDialog(this) }
 
-    private val successBottomSheet by lazy { BottomSheetDialog(context = this) }
+    private val successBottomSheet by lazy { BottomSheetDialog(this) }
 
-    private val loadingBottomSheet by lazy { BottomSheetDialog(context = this) }
+    private val loadingBottomSheet by lazy { BottomSheetDialog(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
