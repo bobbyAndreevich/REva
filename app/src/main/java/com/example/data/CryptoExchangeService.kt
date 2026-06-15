@@ -3,12 +3,10 @@ package com.revolut.interview.data
 import android.os.Looper
 import android.os.NetworkOnMainThreadException
 import com.example.data.MoneyDto
+import com.example.data.ServerException
 import kotlinx.coroutines.delay
 import kotlin.math.absoluteValue
 import kotlin.random.Random
-
-// Исключение, которое мы будем перехватывать
-class ServerException(val code: Int) : Exception("Server error with code: $code")
 
 interface CryptoExchangeService {
     suspend fun exchange(amount: MoneyDto)
